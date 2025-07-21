@@ -67,7 +67,6 @@ gatk HaplotypeCaller \
     -I SRR11880780.cram \
     -O SRR11880780.vcf.gz \
     -L ~/2025_KOGO_workshop/wgs/data/hg38/hg38.refGene.exon.bed.gz
-
 ```
 ### 5. Build GenomicDB & Joint Genotyping (Not be conducted in this session)
 ```
