@@ -69,10 +69,10 @@ gatk HaplotypeCaller \
     -L ~/2025_KOGO_workshop/wgs/data/hg38/hg38.refGene.exon.bed.gz
 
 ```
-# 5. Build GenomicDB & Joint Genotyping (Not be conducted in this session)
+### 5. Build GenomicDB & Joint Genotyping (Not be conducted in this session)
 ```
 ```
-# 6.1. VariantRecalibrator for SNPs
+### 6.1. VariantRecalibrator for SNPs
 ```
 gatk VariantRecalibrator \
     -R ~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
@@ -85,7 +85,7 @@ gatk VariantRecalibrator \
     -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR \
     -mode SNP
 ```
-# 6.2. ApplyVQSR for SNPs
+### 6.2. ApplyVQSR for SNPs
 ```
 gatk ApplyVQSR \
     -R ~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
@@ -96,7 +96,7 @@ gatk ApplyVQSR \
     -ts-filter-level 99.5 \
     -mode SNP
 ```
-# 6.3. VariantRecalibrator for INDELs
+### 6.3. VariantRecalibrator for INDELs
 ```
 gatk VariantRecalibrator \
     -R ~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
@@ -109,7 +109,7 @@ gatk VariantRecalibrator \
     --max-gaussians 4 \
     -mode INDEL
 ```
-# 6.4. ApplyVQSR for INDELs
+### 6.4. ApplyVQSR for INDELs
 ```
 gatk ApplyVQSR \
     -R ~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
